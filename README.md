@@ -1,2 +1,7 @@
-# TechnicalHugoTheme
+# Theme Name
 
+## Features
+
+## Installation
+
+## Configuration

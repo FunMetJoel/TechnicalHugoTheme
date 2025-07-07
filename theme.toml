@@ -1,0 +1,19 @@
+name = 'TechnicalHugoTheme'
+license = 'GNU General Public License v3.0 only'
+licenselink = 'https://github.com/FunMetJoel/TechnicalHugoTheme/LICENSE'
+description = 'Theme description'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/FunMetJoel/TechnicalHugoTheme'
+
+# If you have a running demo of the theme
+demosite = 'https://funmetjoel.nl'
+
+# Taxonomy terms
+tags = ['blog', 'company']
+features = ['some', 'awesome', 'features']
+
+# If the theme has a single author
+[author]
+  name = 'FunMetJoel'
+  homepage = 'https://funmetjoel.nl'
