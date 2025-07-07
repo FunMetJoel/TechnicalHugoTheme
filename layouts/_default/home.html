@@ -1,4 +1,12 @@
+
+
 {{ define "main" }}
+  <p>Welkom bij</p>
+  <h1>{{ .Title }}</h1>
+  
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+
+
   {{ .Content }}
   {{ range site.RegularPages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>

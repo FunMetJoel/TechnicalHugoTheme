@@ -1,0 +1,38 @@
+
+/* Default color scheme, dark mode */
+:root {
+    --bg-dark: HSL(0, 0%, 3%);
+    --bg-middle: HSL(0, 0%, 10%);
+    --bg-light: HSL(0, 0%, 17%);
+
+    --text: HSL(0, 0%, 90%);
+    --text-muted: HSL(0, 0%, 70%);
+
+    --border: HSL(0, 0%, 20%);
+
+    --gradient: linear-gradient(
+        0deg,
+        var(--bg-dark) 0%,
+        var(--bg-middle) 100%
+    );
+}
+
+/* light mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-dark: HSL(0, 0%, 85%);
+        --bg-middle: HSL(0, 0%, 93%);
+        --bg-light: HSL(0, 0%, 100%);
+
+        --text: HSL(0, 0%, 10%);
+        --text-muted: HSL(0, 0%, 30%);
+
+        --border: HSL(0, 0%, 50%);
+
+        --gradient: linear-gradient(
+            0deg,
+            var(--bg-dark) 0%,
+            var(--bg-middle) 100%
+        );
+    }
+}

@@ -1,14 +1,14 @@
-body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+html {
+  width: 100%;
 }
 
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+body {
+  width: 100%;
+  margin: 0;
+  color: var(--text-muted);
+  background-color: var(--bg-dark);
+  font-family: sans-serif;
+  line-height: 1.5;
 }
 
 footer {
@@ -17,6 +17,16 @@ footer {
 }
 
 a {
-  color: #00e;
+  /* color: #00e; */
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+}
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
 }
