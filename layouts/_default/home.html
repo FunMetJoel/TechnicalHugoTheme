@@ -1,15 +1,32 @@
-
-
 {{ define "main" }}
-  <p>Welkom bij</p>
-  <h1>{{ .Title }}</h1>
+  <div class="home-hero card">
+    {{ with .Params.preTitle }}
+      <h2>{{ . }}</h2>
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+      <p class="subtitle">{{ . }}</p>
+    {{ end }}
+  </div>
   
-  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  {{/*  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}  */}}
 
 
   {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+
+
+  <div class="recent-posts">
+    {{ $recent := .Site.RegularPages | first 3 }}
+    {{ range $recent }}
+      <div class="card">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p class="date">{{ .Date.Format "2 Jan 2006" }}</p>
+      </div>
+    {{ end }}
+  </div>
+
+
+  
+  
+
 {{ end }}

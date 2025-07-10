@@ -1,19 +1,23 @@
 
 /* Default color scheme, dark mode */
 :root {
-    --bg-dark: HSL(0, 0%, 3%);
+    /* --bg-dark: HSL(0, 0%, 3%);
     --bg-middle: HSL(0, 0%, 10%);
-    --bg-light: HSL(0, 0%, 17%);
+    --bg-light: HSL(0, 0%, 17%); */
+
+    --bg-dark: hsl(234 100% 4%);
+    --bg-middle: hsl(224 96% 7%);
+    --bg-light: hsl(218 76% 10%);
 
     --text: HSL(0, 0%, 90%);
     --text-muted: HSL(0, 0%, 70%);
 
-    --border: HSL(0, 0%, 20%);
+    --border: hsl(217, 90%, 23%);
 
     --gradient: linear-gradient(
         0deg,
         var(--bg-dark) 0%,
-        var(--bg-middle) 100%
+        var(--bg-light) 100%
     );
 }
 

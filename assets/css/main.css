@@ -30,3 +30,11 @@ main {
   max-width: 800px;
   margin: auto;
 }
+
+.card {
+  background-color: var(--bg-middle);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}

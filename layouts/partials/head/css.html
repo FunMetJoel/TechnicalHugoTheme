@@ -4,6 +4,11 @@
   "css/header.css"
 }}
 
+{{ if .IsHome }}
+  {{- $cssFiles = $cssFiles | append "css/home.css" }}
+{{ end }}
+
+
 {{- range $css := $cssFiles }}
   {{- with resources.Get $css }}
     {{- if eq hugo.Environment "development" }}
