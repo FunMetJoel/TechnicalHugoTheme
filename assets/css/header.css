@@ -72,4 +72,3 @@ header nav ul li a::before {
 header nav ul li a:hover::before {
   transform: scaleX(1);
 }
-
