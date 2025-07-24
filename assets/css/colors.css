@@ -43,7 +43,7 @@
     --text: HSL(0, 0%, 10%);
     --text-muted: HSL(0, 0%, 30%);
 
-    --border: HSL(0, 0%, 50%);
+    --border: HSL(0, 0%, 75%);
 
     --gradient: linear-gradient(
         0deg,
@@ -52,4 +52,7 @@
     );
 
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    --main: hsl(35, 100%, 50%);
+    --main-muted: hsl(35, 90%, 40%);
 }

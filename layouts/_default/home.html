@@ -1,5 +1,11 @@
 {{ define "main" }}
   <div class="home-hero">
+
+
+    <div class="logo">
+      {{ readFile "static/svg/Logo.svg" | safeHTML}}
+    </div>
+
     {{ with .Params.preTitle }}
       <h2>{{ . }}</h2>
     {{ end }}
@@ -14,7 +20,7 @@
 
     <div class="recent-posts"> 
       {{- range .Params.buttons }}
-      <a href="{{ trim .url " " | safeURL }}" class="button" target="_blank" rel="noopener noreferrer me" title="{{ (.title | default .name) | title }}">
+      <a href="{{ trim .url " " | safeURL }}" class="button" rel="noopener noreferrer me" title="{{ (.title | default .name) | title }}">
           <p>{{.name}}</p>
       </a>
       {{- end }}

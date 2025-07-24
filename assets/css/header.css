@@ -16,6 +16,18 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
+header .headerLogo {
+  display: flex;
+  align-items: center;
+}
+
+header .headerLogo .logo{
+  height: 4rem;
+  width: 2rem;
+  margin-right: 0.5rem;
+
+}
+
 
 header > * > a {
   color: var(--text);

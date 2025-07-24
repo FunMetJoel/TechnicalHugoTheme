@@ -12,8 +12,6 @@
     justify-content: center;
     
     border-radius: 20px;
-
-    transition: background-color 0.5s;
 }
 
 @media only screen and (max-height:600px) {
@@ -21,7 +19,6 @@
         background-color: #00000000;
     }
 }
-
 
 .home-hero h1 {
     font-size: clamp(2rem, 8vw, 4rem);

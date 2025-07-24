@@ -9,8 +9,6 @@ body {
   background-color: var(--bg-dark);
   font-family: sans-serif;
   line-height: 1.5;
-
-  transition: background 0.3s, color 0.3s;
 }
 
 footer {
@@ -75,7 +73,7 @@ a {
   padding: 0 1rem;
   margin: 1rem;
   box-shadow: var(--shadow);
-  transition: all 0.25s;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .button:hover {
@@ -85,4 +83,36 @@ a {
 .button:active {
   transform: translateY(2px);
   box-shadow: none;
+}
+
+.logo svg {
+    width: clamp(2rem, 8vw, 4rem);
+    height: clamp(2rem, 8vw, 4rem);
+}
+.logo > svg {
+    max-width: 100%;
+    max-height: 100%;
+    color: var(--main);
+}
+
+.logo svg * {
+    fill: var(--main);
+}
+
+.listcard h1 {
+  color: var(--main);
+  margin-top: 0;
+}
+
+.listcard .content {
+  margin-left: 1rem;
+}
+
+.cardslist {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  gap:2%
+}
+
+.cardslist .listcard {
 }
