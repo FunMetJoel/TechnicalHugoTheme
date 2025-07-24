@@ -1,11 +1,11 @@
 
 header {
   padding-top: 0;
-  border-radius: 0.5rem;
   position: sticky;
   top: 0;
   width: calc(100% - 2rem);
   padding: 1rem;
+  height: calc(60px - 2rem);
 
   display: flex;
   flex-direction: row;
@@ -57,7 +57,7 @@ header nav ul li a:hover {
 }
 
 header nav ul li a::before {
-    content: "";
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -71,4 +71,10 @@ header nav ul li a::before {
 
 header nav ul li a:hover::before {
   transform: scaleX(1);
+}
+
+@media only screen and (max-width:600px) {
+  header nav{
+    display: none;
+  }
 }

@@ -1,12 +1,25 @@
 {{ define "main" }}
-  <div class="home-hero card">
+  <div class="home-hero">
     {{ with .Params.preTitle }}
       <h2>{{ . }}</h2>
     {{ end }}
+
     <h1>{{ .Title }}</h1>
+
+    {{ partial "social_icons.html" site.Params.socialIcons }}
     {{ with .Params.subtitle }}
       <p class="subtitle">{{ . }}</p>
     {{ end }}
+
+
+    <div class="recent-posts"> 
+      {{- range .Params.buttons }}
+      <a href="{{ trim .url " " | safeURL }}" class="button" target="_blank" rel="noopener noreferrer me" title="{{ (.title | default .name) | title }}">
+          <p>{{.name}}</p>
+      </a>
+      {{- end }}
+    </div>
+
   </div>
   
   {{/*  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}  */}}

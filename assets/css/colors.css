@@ -5,13 +5,17 @@
     --bg-middle: HSL(0, 0%, 10%);
     --bg-light: HSL(0, 0%, 17%); */
 
-    --bg-dark: hsl(237 100% 5%);
+    /* --bg-dark: hsl(237 100% 5%);
     --bg-middle: hsl(228 92% 7%);
     --bg-light: hsl(222 73% 11%);
 
     --bg-dark: #181818;
     --bg-middle: #212121;
-    --bg-light: #303030;
+    --bg-light: #303030; */
+
+    --bg-dark: hsl(180 9% 14%);
+    --bg-middle: hsl(180 9% 18%);
+    --bg-light: hsl(180 9% 22%);
 
     --text: HSL(0, 0%, 90%);
     --text-muted: HSL(0, 0%, 70%);
@@ -21,10 +25,13 @@
     --gradient: linear-gradient(
         0deg,
         var(--bg-dark) 0%,
-        var(--bg-light) 100%
+        var(--bg-middle) 100%
     );
 
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    --main: hsl(39, 100%, 50%);
+    --main-muted: hsl(39, 90%, 40%);
 }
 
 /* light mode */
@@ -41,7 +48,7 @@
     --gradient: linear-gradient(
         0deg,
         var(--bg-dark) 0%,
-        var(--bg-light) 100%
+        var(--bg-middle) 100%
     );
 
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
