@@ -5,11 +5,30 @@
   <div class="cardslist">
     {{ range .Pages }}
       <div class="card listcard">
-        <a href="{{ .RelPermalink }}"><h1>{{ .LinkTitle }}</h1></a>
-        <div class="content">
-          {{ .Summary }}
+        <div class="mainCardContent">
+          <a href="{{ .RelPermalink }}"><h1>{{ .LinkTitle }}</h1></a>
+          <div class="content">
+            {{ .Summary }}
+          </div>
         </div>
+        
+        {{ $tags := .GetTerms "tags"}}
+        {{ if $tags }}
+          <div class="tagicons">
+            {{ range $tags}}
+
+              {{ $url := printf "svg/tags/%s.svg" (lower .LinkTitle) }}
+              {{ $projectPath := path.Join "static" $url }}
+              {{ $themePath := path.Join "themes/TechnicalHugoTheme/static" $url}}
+              
+              {{ if or (fileExists $projectPath) (fileExists $themePath) }}
+                <a href="{{ .RelPermalink }}"><img src="/svg/tags/{{lower .LinkTitle | urlquery}}.svg"></a>
+              {{ end }}
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
     {{ end }}
   </div>
+  
 {{ end }}
