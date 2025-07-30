@@ -32,18 +32,21 @@
 
     --main: hsl(39, 100%, 50%);
     --main-muted: hsl(39, 90%, 40%);
+
+    --grid-lines: var(--bg-middle);
+
 }
 
 /* light mode */
 [data-theme="light"] {
-    --bg-dark: HSL(0, 0%, 85%);
-    --bg-middle: HSL(0, 0%, 93%);
-    --bg-light: HSL(0, 0%, 100%);
+    --bg-dark: hsl(0, 0%, 95%);
+    --bg-middle: hsl(0, 0%, 98%);
+    --bg-light: hsl(0, 0%, 100%);
 
-    --text: HSL(0, 0%, 10%);
-    --text-muted: HSL(0, 0%, 30%);
+    --text: hsl(0, 0%, 10%);
+    --text-muted: hsl(0, 0%, 30%);
 
-    --border: HSL(0, 0%, 75%);
+    --border: hsl(0, 0%, 75%);
 
     --gradient: linear-gradient(
         0deg,
@@ -55,4 +58,7 @@
 
     --main: hsl(35, 100%, 50%);
     --main-muted: hsl(35, 90%, 40%);
+    --main-hint: hsl(35, 50%, 88%);
+
+    --grid-lines: var(--main-hint);
 }

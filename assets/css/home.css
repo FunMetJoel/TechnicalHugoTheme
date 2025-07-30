@@ -2,7 +2,7 @@
     text-align: center;
     margin: 2rem 0;
     margin-bottom: 3rem;
-    background-color: var(--bg-middle);
+    /* background-color: var(--bg-middle); */
     padding: 2rem;
     height: calc(100vh - 2 * 5rem - 60px);
 
@@ -11,7 +11,37 @@
     align-items: center;
     justify-content: center;
     
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    margin: auto -1rem;
+}
+
+.home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(to right, var(--grid-lines) 3px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-lines) 3px, transparent 1px);
+    background-size: 3em 3em;
+
+    /* Fade with radial mask */
+    mask-image: radial-gradient(circle, black 0%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle, black 0%, transparent 100%);
+    mask-mode: match-source;
+    -webkit-mask-mode: match-source;
+
+    pointer-events: none;
+}
+
+.home-hero .logo svg {
+    width: clamp(4rem, 16vw, 8rem);
+    height: clamp(4rem, 16vw, 8rem);
 }
 
 @media only screen and (max-height:600px) {
