@@ -20,7 +20,7 @@
     --text: HSL(0, 0%, 90%);
     --text-muted: HSL(0, 0%, 70%);
 
-    --border: hsl(0, 0%, 25%);
+    --border: hsl(0, 0%, 30%);
 
     --gradient: linear-gradient(
         0deg,

@@ -28,7 +28,7 @@
     background:
         linear-gradient(to right, var(--grid-lines) 3px, transparent 1px),
         linear-gradient(to bottom, var(--grid-lines) 3px, transparent 1px);
-    background-size: 3em 3em;
+    background-size: min(3em, 10vw) min(3em, 10vw);
 
     /* Fade with radial mask */
     mask-image: radial-gradient(circle, black 0%, transparent 100%);
