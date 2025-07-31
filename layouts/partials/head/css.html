@@ -1,12 +1,16 @@
 {{- $cssFiles := slice 
   "css/colors.css" 
-  "css/main.css" 
+  "css/base.css" 
   "css/header.css"
-  "css/devicon.min.css"
+  "css/github-dark.min.css"
 }}
 
 {{ if .IsHome }}
   {{- $cssFiles = $cssFiles | append "css/home.css" }}
+{{ end }}
+
+{{ if eq .Kind "page" }}
+  {{- $cssFiles = $cssFiles | append "css/page.css" }}
 {{ end }}
 
 

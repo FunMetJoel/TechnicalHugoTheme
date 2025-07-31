@@ -105,6 +105,13 @@ a {
   justify-content: space-between;
   gap: 0.6rem;
   padding-bottom: 0.4rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.listcard:hover {
+  background-color: var(--bg-light);
+  transform: scale(1.02);
 }
 
 .listcard h1 {
@@ -142,12 +149,17 @@ a {
   }
 }
 
+
 .tagicons {
   margin-top: auto;
-  background: linear-gradient(to top, var(--bg-light) 30%, var(--bg-light) 70%, transparent);
   display: flex;
   flex-direction: row;
   gap: 3px;
+  
+}
+
+.listcard .tagicons {
+  background: linear-gradient(to top, var(--bg-light) 30%, var(--bg-light) 70%, transparent);
   padding-left: 1rem;
   margin: 0 -1rem;
   margin-bottom: -0.4rem;

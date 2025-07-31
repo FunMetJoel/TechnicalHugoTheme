@@ -1,10 +1,27 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h1 class="post-title">{{ .Title }}</h1>
 
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
+  {{ $tags := .GetTerms "tags"}}
+  {{ if $tags }}
+    <div class="tagicons">
+      {{ range $tags}}
+
+        {{ $url := printf "svg/tags/%s.svg" (lower .LinkTitle) }}
+        {{ $projectPath := path.Join "static" $url }}
+        {{ $themePath := path.Join "themes/TechnicalHugoTheme/static" $url}}
+        
+        {{ if or (fileExists $projectPath) (fileExists $themePath) }}
+          <a href="{{ .RelPermalink }}"><img src="/svg/tags/{{lower .LinkTitle | urlquery}}.svg"></a>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+
   {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
 {{ end }}
+
