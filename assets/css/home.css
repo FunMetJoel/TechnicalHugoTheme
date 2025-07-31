@@ -4,7 +4,8 @@
     margin-bottom: 3rem;
     /* background-color: var(--bg-middle); */
     padding: 2rem;
-    height: calc(100vh - 2 * 5rem - 60px);
+    padding-bottom: 0;
+    height: calc(100vh - 2 * 2rem - 60px);
 
     display: flex;
     flex-direction: column;
@@ -47,6 +48,7 @@
 @media only screen and (max-height:600px) {
     .home-hero{
         background-color: #00000000;
+        justify-content: end;
     }
 }
 
@@ -66,6 +68,9 @@
     flex-wrap: wrap;
 }
 
+.navigation .button {
+    margin: 0.4rem 1rem;
+}
 
 .recent-posts .card {
     flex: 1;
@@ -83,4 +88,17 @@
         flex-wrap: wrap;
         width: 100%;
     }
+
+    .home-hero{
+        
+        justify-content: end;
+    }
+
+    .navigation {
+        display: grid;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
 }

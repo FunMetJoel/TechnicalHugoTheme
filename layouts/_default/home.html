@@ -18,7 +18,7 @@
     {{ end }}
 
 
-    <div class="recent-posts"> 
+    <div class="navigation"> 
       {{- range .Params.buttons }}
       <a href="{{ trim .url " " | safeURL }}" class="button" rel="noopener noreferrer me" title="{{ (.title | default .name) | title }}">
           <p>{{.name}}</p>
