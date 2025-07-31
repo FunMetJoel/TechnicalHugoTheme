@@ -174,3 +174,48 @@ a {
   margin:0;
   display: block;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+table th {
+  background-color: var(--bg-light);
+  color: var(--text);
+}
+table tr:nth-child(even) {
+  background-color: var(--bg-middle);
+}
+table tr:nth-child(odd) {
+  background-color: var(--bg-dark);
+}
+table tr:hover {
+  background-color: var(--bg-light);
+}
+@media only screen and (max-width:600px) {
+  table, table thead, table tbody, table th, table td, table tr {
+    display: block;
+  }
+  table tr {
+    margin-bottom: 1rem;
+  }
+  table th, table td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+  table th::before, table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 1rem;
+    font-weight: bold;
+  }
+}
