@@ -5,7 +5,7 @@
     /* background-color: var(--bg-middle); */
     padding: 2rem;
     padding-bottom: 0;
-    height: calc(100vh - 2 * 2rem - 60px);
+    height: calc(100vh - 60px);
 
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@
 
     width: calc(100% - 2 * 1rem);
     margin: auto -1rem;
+    margin-top: -1rem;
 }
 
 .home-hero::before {
@@ -82,6 +83,11 @@
     width: calc(33.333% - 1rem);
 }
 
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 @media only screen and (max-width:600px) {
     .recent-posts {
         display: grid;
@@ -89,16 +95,10 @@
         width: 100%;
     }
 
-    .home-hero{
-        
-        justify-content: end;
-    }
-
     .navigation {
         display: grid;
         flex-wrap: wrap;
         width: 100%;
-        margin-bottom: 2rem;
     }
 
 }

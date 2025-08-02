@@ -23,12 +23,14 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--text);
+  scroll-margin-top: 80px;
 }
 
 main {
   padding: 1rem;
   max-width: 90vw;/*min(80vw, 100vh); */
   margin: auto;
+  display: flex;
 }
 @media only screen and (max-width:600px) {
   main {
@@ -37,7 +39,53 @@ main {
     width: calc(100%-2*10px);
     max-width: 100%;
   }
+  
 }
+
+@media only screen and (max-width:1000px) {  
+  .sidebar {
+    display: none;
+  }
+}
+
+.sidebar {
+  width: 25vw;
+  overflow: hidden;
+  font-size: 12px;
+  margin-right: -2rem;
+}
+
+.sidebar nav {
+  position: fixed;
+  top: calc(60px + 1rem);
+  padding-left: 0.5rem;
+  margin-left: 1rem;
+  border-left: 1px solid var(--border);
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem;
+}
+.sidebar nav ul li {
+  margin: 0.2rem 0;
+}
+.sidebar nav li ul {
+  margin-top: 0rem;
+}
+
+.sidebar nav li a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.main-content {
+  width: 100%;
+  padding: 1rem;
+  overflow: auto;
+}
+
 
 .card {
   background-color: var(--bg-middle);

@@ -8,9 +8,9 @@
       <div class="card listcard">
         <div class="mainCardContent">
           <a href="{{ .RelPermalink }}"><h1>{{ .LinkTitle }}</h1></a>
-          <div class="content">
+          <p class="content">
             {{ .Summary }}
-          </div>
+          </p>
         </div>
         
         {{ $tags := .GetTerms "tags"}}

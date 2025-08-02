@@ -21,7 +21,20 @@
     </div>
   {{ end }}
 
+  {{ if .TableOfContents}}
+  <div class="toc card collapsed">
+    <a href="#" class="toc-title" onclick="this.parentElement.classList.toggle('collapsed');">
+      <span class="toc-triangle-collapsed">▶</span><span class="toc-triangle-expanded">▼</span> Table of Contents
+    </a>
+    {{ .TableOfContents }}
+  </div>
+  {{ end }}
+
   {{ .Content }}
 
 {{ end }}
 
+{{ define "sidebar" }}
+  {{ .Scratch.Set "hasSidebar" true }}
+  {{ .TableOfContents }}
+{{ end }}

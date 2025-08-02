@@ -7,3 +7,27 @@
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
+
+.toc {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-middle);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+.toc.collapsed nav{
+  display: none;
+}
+
+.toc.collapsed .toc-triangle-expanded {
+  display: none;
+}
+
+.toc:not(.collapsed) .toc-triangle-collapsed {
+  display: none;
+}
+
+.toc nav {
+  transition: all 0.3s ease;
+}
