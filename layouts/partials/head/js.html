@@ -1,3 +1,12 @@
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
+      inlineMath: [['$', '$'], ['\\(', '\\)']]                  // inline
+    }
+  };
+</script>
+
 {{- $jsFiles := slice 
   "js/main.js" 
   "js/colorTheme.js" 
@@ -24,13 +33,4 @@
   document.addEventListener("DOMContentLoaded", function() {
     hljs.highlightAll();
   });
-  MathJax = {
-    tex: {
-      displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
-      inlineMath: [['$', '$'], ['\\(', '\\)']]                  // inline
-    },
-    loader:{
-      load: ['ui/safe']
-    },
-  };
 </script>
